@@ -33,7 +33,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
+                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow me</h2>
                     <ul className="text-gray-500 font-medium">
                         <li className="mb-4">
                             <a
@@ -46,9 +46,14 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <Link to="/" className="hover:underline">
-                                Discord
-                            </Link>
+                        <a
+                                href="https://www.linkedin.com/in/saidul-islam-83a3a7ba/"
+                                className="hover:underline"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Linkedin
+                            </a>
                         </li>
                     </ul>
                 </div>
