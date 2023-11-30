@@ -43,9 +43,10 @@ if(todos){
  
   return (
     <TodoProvider value={{todos,addTodo,updateTodo,deleteTodo,toggleComplete}}>
-        <div className="bg-[#172842] pb-8 pt-2">
+        <div className="bg-[#172842] pb-6 pt-1">
             <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
-                <h1 className="text-2xl font-bold text-center mb-8 mt-2">Cashier App </h1>
+                <h1 className="text-2xl font-bold text-center mb-8 mt-2">Cashier App 
+                <span className="text-sm block">By Syeed Islam</span></h1>
                 <div className="mb-4">
                     {/* Todo form goes here */} 
                     <TodoForm />

@@ -22,7 +22,7 @@ function NoteForm() {
         <form onSubmit={add}  className="flex">
             <input
                 type="number" list="taka"
-                placeholder="Collection..."
+                placeholder="Cost ..."
                 className="w-full border border-black/10 rounded-lg px-3 outline-none duration-150 bg-white/20 py-1.5 mr-1"
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)}
