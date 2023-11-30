@@ -16,7 +16,7 @@ function Footer() {
                     />
                 </Link>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-8 sm:gap-20 sm:grid-cols-2">
                 <div>
                     <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                     <ul className="text-gray-500 font-medium">
@@ -25,12 +25,12 @@ function Footer() {
                                 Home
                             </Link>
                         </li>
-                        <li>
+                        <li className="mb-4">
                             <Link to="/about" className="hover:underline">
                                 About
                             </Link>
                         </li>
-                        <li className="mb-4">
+                        <li>
                             <Link to="#" className="hover:underline">
                                 User Manual
                             </Link>
