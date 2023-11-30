@@ -31,12 +31,16 @@ function TodoApp() {
         localStorage.setItem("todos", JSON.stringify(todos))
       }, [todos])
 
-      const totalcash = todos.reduce(function(tot, arr) { 
+      let totalcash=0
+if(todos){
+     totalcash = todos.reduce(function(tot, arr) { 
         // return the sum with previous value
         return tot + Number(arr.todo);
       
         // set initial value as 0
-      },0);  
+      },0); 
+}
+ 
   return (
     <TodoProvider value={{todos,addTodo,updateTodo,deleteTodo,toggleComplete}}>
         <div className="bg-[#172842] pb-8 pt-2">

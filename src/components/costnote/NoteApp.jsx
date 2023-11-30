@@ -30,13 +30,16 @@ function NoteApp() {
       useEffect(() => {
         localStorage.setItem("notes", JSON.stringify(notes))
       }, [notes])
-
-      const totalnote = notes.reduce(function(tot, arr) { 
+      let totalnote =0
+    if(notes){
+       totalnote = notes.reduce(function(tot, arr) { 
         // return the sum with previous value
         return tot + Number(!arr.completed ? arr.todo : 0);
       
         // set initial value as 0
-      },0);  
+      },0); 
+    } 
+
   return (
     <NoteProvider value={{notes,addTodo,updateTodo,deleteTodo,toggleComplete}}>
         <div className="bg-[#172842] pb-8 pt-2">

@@ -11,19 +11,24 @@ export default function Home() {
         const todos2 = JSON.parse(localStorage.getItem("todos"))
         const costs2 = JSON.parse(localStorage.getItem("costs"))
 
-        const totalcash = todos2.reduce(function(tot, arr) { 
+        let totalcash=0
+        let totalcost=0
+    if(todos2){
+         totalcash = todos2.reduce(function(tot, arr) { 
             // return the sum with previous value
             return tot + Number(arr.todo);
           
             // set initial value as 0
           },0); 
-
-        const totalcost = costs2.reduce(function(tot, arr) { 
+        }
+    if(costs2){        
+         totalcost = costs2.reduce(function(tot, arr) { 
             // return the sum with previous value
             return tot + Number(arr.cost);
           
             // set initial value as 0
           },0); 
+    }  
           const reload = () => {
             window.location.reload();
           }

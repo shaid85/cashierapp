@@ -25,13 +25,15 @@ function CostApp() {
       localStorage.setItem("costs", JSON.stringify(costs))
     }, [costs])
 
-    const totalcost = costs.reduce(function(tot, arr) { 
+    let totalcost=0
+  if(costs){
+     totalcost = costs.reduce(function(tot, arr) { 
       // return the sum with previous value
       return tot + Number(arr.cost);
     
       // set initial value as 0
     },0); 
-
+  }
 
   return (
     <CostProvider value={{costs,addCost,deleteCost}}>
