@@ -19,7 +19,7 @@ function TodoForm() {
     }
 
     const playerlist = JSON.parse(localStorage.getItem("players"))
-   
+
     return (
         <form onSubmit={add}  className="flex">
             <input
@@ -47,7 +47,7 @@ function TodoForm() {
     <option value={player.player}></option>
   ))
   ) : (
-    <option value="Add Player First"></option>
+    <option value=""></option>
   )}
   
   </datalist>

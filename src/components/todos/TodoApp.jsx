@@ -32,10 +32,17 @@ function TodoApp() {
       }, [todos])
 
       let totalcash=0
+      let totallisted=0
 if(todos){
      totalcash = todos.reduce(function(tot, arr) { 
         // return the sum with previous value
         return tot + Number(arr.completed ? arr.todo : 0);
+      
+        // set initial value as 0
+      },0); 
+      totallisted = todos.reduce(function(tot, arr) { 
+        // return the sum with previous value
+        return tot + Number( arr.todo );
       
         // set initial value as 0
       },0); 
@@ -61,7 +68,10 @@ if(todos){
                     ))}
                     
                 </div>
-                <div className="w-full mt-3">Total Collection: {totalcash}</div>
+                <div className="w-full mt-3 flex justify-between">
+                    <p>Total Collection: {totalcash}</p>
+                    <p>Total Listed: {totallisted}</p>
+                </div>
             </div>
         </div>
     </TodoProvider>
