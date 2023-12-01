@@ -4,22 +4,22 @@ import logo from '../assets/logo.png';
 
 
 function Header() {
-    const [hidden, setHidden] = useState("hidden")
+    const [hidden, setHidden] = useState("max-h-0")
 
     const handelclick = () => {
         const btn = document.querySelector("#showmenu");
 
-        if(hidden != "show"){
-            setHidden("show")
+        if(hidden != "max-h-40"){
+            setHidden("max-h-40")
         }else{
-            setHidden("hidden")
+            setHidden("max-h-0")
         }
              
         
     }
 
 useEffect(() => {
-    setHidden("hidden")
+    setHidden("max-h-0")
 }, [])
 
 
@@ -44,7 +44,7 @@ useEffect(() => {
                         </div>
                     </button>
                 </div>
-                <div className="hidden justify-between items-center w-full lg:flex  lg:w-auto lg:order-1" id="mobile-menu-2">
+                <div className="hidden  justify-between items-center w-full lg:flex  lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                         <li>
                             <NavLink to="/"
@@ -64,15 +64,16 @@ useEffect(() => {
                                     About
                                 </NavLink>
                         </li>                      
-                        {/* <li>
-                                <NavLink to="/contact"
+                        <li>
+                                <NavLink to="/player"
                                     className={({isActive}) =>
                                         `block py-2 ${isActive ? "text-orange-700" : "text-gray-700"} pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                                     }
                                 >
-                                    Contact
+                                    Add Player Name
                                 </NavLink>
-                        </li>                       */}
+                        </li>                      
+
                     </ul>
                 </div>
 <div className={`lg:!max-h-none lg:!overflow-hidden w-full block overflow-hidden flex-grow lg:flex lg:items-center transition-all lg:w-auto mobilemenu ${hidden}`}>
@@ -96,7 +97,15 @@ useEffect(() => {
                     About
                 </NavLink>
         </li>                      
-
+        <li>
+                <NavLink to="/player"
+                    className={({isActive}) =>
+                        `block py-2 ${isActive ? "text-orange-700" : "text-gray-700"} pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    }
+                >
+                    Add Player Name
+                </NavLink>
+        </li> 
     </ul>
     </div>
 

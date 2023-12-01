@@ -19,6 +19,8 @@ function CostForm() {
         setPlayer("")
     }
 
+    const players = JSON.parse(localStorage.getItem("players"))
+
     return (
         <form onSubmit={add}  className="flex">
             <input
@@ -40,15 +42,9 @@ function CostForm() {
                 onChange={(e) => setPlayer(e.target.value)}
             />
   <datalist id="browsers">
-    <option value="Pran"></option>
-    <option value="Safaed"></option>
-    <option value="Sajjad"></option>
-    <option value="Shohag"></option>
-    <option value="Robi"></option>
-    <option value="Suvo"></option>
-    <option value="Nabil"></option>
-    <option value="Syeed"></option>
-    <option value="Doctor"></option>
+  {players.map((player) => (
+    <option value={player.player}></option>
+  ))}
   </datalist>
             <button type="submit" className="rounded-lg px-4 py-1 bg-green-600 text-white shrink-0">
                 Add

@@ -35,12 +35,13 @@ function TodoApp() {
 if(todos){
      totalcash = todos.reduce(function(tot, arr) { 
         // return the sum with previous value
-        return tot + Number(arr.todo);
+        return tot + Number(arr.completed ? arr.todo : 0);
       
         // set initial value as 0
       },0); 
 }
  
+
   return (
     <TodoProvider value={{todos,addTodo,updateTodo,deleteTodo,toggleComplete}}>
         <div className="bg-[#172842] pb-6 pt-1">
