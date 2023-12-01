@@ -47,7 +47,7 @@ function TodoForm() {
     <option value={player.player}></option>
   ))
   ) : (
-    <option value="Syeed"></option>
+    <option value="Add Player First"></option>
   )}
   
   </datalist>
