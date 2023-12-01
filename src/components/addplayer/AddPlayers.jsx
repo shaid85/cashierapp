@@ -7,9 +7,6 @@ function AddPlayers() {
     const addPlayer = (player) => {
       setPlayers((prev) => [{id: Date.now(), ...player}, ...prev])
     }
-    const updatePlayer = (id, player) => {
-      setPlayers((prev) => prev.map((prevPlayer) => prevPlayer === id ? player : prevPlayer))
-    }
     const deletePlayer = (id) => {
       setPlayers((prev) => prev.filter((prevPlayer) => prevPlayer.id !== id))
     }
