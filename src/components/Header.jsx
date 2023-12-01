@@ -14,13 +14,20 @@ function Header() {
         }else{
             setHidden("max-h-0")
         }
-             
-        
     }
 
 useEffect(() => {
     setHidden("max-h-0")
 }, [])
+
+    const ulclick = () => {
+
+        setTimeout(() => {
+            setHidden("max-h-0")
+            }, 100);
+           
+    }
+
 
 
   return (
@@ -47,7 +54,7 @@ useEffect(() => {
 
 <div className={`lg:!max-h-none lg:!overflow-hidden w-full overflow-hidden lg:flex lg:items-center transition-all lg:w-auto mobilemenu ${hidden}`}>
     <div class="text-sm lg:flex-grow">
-    <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+    <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"  onClick={ulclick}>
         <li>
             <NavLink to="/"
                         className={({isActive}) =>

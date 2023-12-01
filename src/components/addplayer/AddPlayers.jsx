@@ -25,11 +25,13 @@ function AddPlayers() {
       if (players && players.length > 0){
         setPlayers(players)
       }
+
     }, [])
   
     useEffect(() => {
       localStorage.setItem("players", JSON.stringify(players))
     }, [players])    
+
 
   return (
     <div className='max-w-md mx-auto p-4'>
@@ -37,10 +39,10 @@ function AddPlayers() {
       onSubmit={add}>
         <input type="text"
                 placeholder="Player Name..."
-                className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
+                className="w-full border border-black/30 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
         value={player}
         onChange={(e) => setPlayer(e.target.value)} />
-            <button type="submit" className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0">
+            <button type="submit" className="rounded-r-lg px-3 py-1 bg-blue-500 text-white shrink-0">
                 Add
             </button>
       </form>
