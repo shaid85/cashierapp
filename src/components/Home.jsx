@@ -4,7 +4,6 @@ import TodoApp from "./todos/TodoApp";
 import ThemeMood from "./thememood/ThemeMood"
 import CostApp from "./costpaid/CostApp";
 import NoteApp from "./costnote/NoteApp"
-import AddPlayers from "./addplayer/AddPlayers";
 
 
 export default function Home() {
