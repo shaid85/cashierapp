@@ -37,11 +37,23 @@ function AddPlayers() {
     <div className='max-w-md mx-auto p-4'>
       <form action=""  className="flex py-4"
       onSubmit={add}>
-        <input type="text"
+        <input type="text" list="browsers2" 
                 placeholder="Player Name..."
                 className="w-full border border-black/30 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
         value={player}
         onChange={(e) => setPlayer(e.target.value)} />
+    <datalist id="browsers2">
+    <option value="Pran"></option>
+    <option value="Safaed"></option>
+    <option value="Sajjad"></option>
+    <option value="Shohag"></option>
+    <option value="Robi"></option>
+    <option value="Suvo"></option>
+    <option value="Nabil"></option>
+    <option value="Syeed"></option>
+    <option value="Doctor"></option>
+    <option value="Shovon"></option>
+  </datalist>      
             <button type="submit" className="rounded-r-lg px-3 py-1 bg-blue-500 text-white shrink-0">
                 Add
             </button>
