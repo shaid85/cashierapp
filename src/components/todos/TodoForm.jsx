@@ -41,16 +41,7 @@ function TodoForm() {
                 value={player}
                 onChange={(e) => setPlayer(e.target.value)}
             />
-  <datalist id="browsers">
-  {playerlist.length > 0 ? (
-    playerlist.map((player) => (
-    <option value={player.player}></option>
-  ))
-  ) : (
-    <option value=""></option>
-  )}
   
-  </datalist>
             <button type="submit" className="rounded-lg px-4 py-1 bg-green-600 text-white shrink-0">
                 Add
             </button>
