@@ -18,7 +18,14 @@ function TodoForm() {
         setPlayer("")
     }
 
+    
     const playerlist = JSON.parse(localStorage.getItem("players"))
+    // let players = []
+    // if(playerlist){
+    //     players = playerlist.map((player) => (
+    //         <option value=${player.player}></option>
+    //     ))
+    // }
 
     return (
         <form onSubmit={add}  className="flex">
@@ -29,11 +36,11 @@ function TodoForm() {
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)}
             />
-    <datalist id="taka">
+<datalist id="taka">
     <option value="300"></option>
     <option value="200"></option>
     <option value="100"></option>
-  </datalist>          
+</datalist>          
             <input
                 type="text" list="browsers"
                 placeholder="Player Name."
@@ -41,10 +48,17 @@ function TodoForm() {
                 value={player}
                 onChange={(e) => setPlayer(e.target.value)}
             />
-  
+   <datalist id="browsers">
+    {playerlist ? (
+        playerlist.map((player) => (
+             <option value={player.player}></option>
+         ))
+    ): (null)}
+   </datalist>
             <button type="submit" className="rounded-lg px-4 py-1 bg-green-600 text-white shrink-0">
                 Add
             </button>
+            
         </form>
     );
 }
