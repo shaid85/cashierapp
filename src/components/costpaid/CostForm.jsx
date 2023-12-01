@@ -20,7 +20,8 @@ function CostForm() {
     }
 
     const players = JSON.parse(localStorage.getItem("players"))
-    if(players.length = 0){
+     // set player empty array
+     if(players.length == 0){
         players = []
     }
     return (
