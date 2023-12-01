@@ -19,7 +19,9 @@ function NoteForm() {
     }
 
     const players = JSON.parse(localStorage.getItem("players"))
-
+    if(players.length = 0){
+        players = []
+    }
     return (
         <form onSubmit={add}  className="flex">
             <input
