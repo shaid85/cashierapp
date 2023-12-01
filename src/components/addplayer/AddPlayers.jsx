@@ -84,7 +84,7 @@ function AddPlayers() {
 
             
       </div>
-      
+      <div className="w-full font-medium"><h2>Go To Cashier App - <a className="font-medium underline text-[#01afef]" href="https://cashierapp.vercel.app/">Home</a></h2></div>
     </div>
   )
 }
