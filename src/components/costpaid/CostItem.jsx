@@ -11,7 +11,7 @@ function CostItem({cost}) {
      shadow-white/50 duration-300  text-black mr-1 bg-[#ccbed7]`}>
 
     {/* Edit, Save Button */}        
-            <input type="text" className={`border-0 outline-none w-full bg-transparent rounded-lg `}
+            <input type="text" className={`border-0 outline-none w-10 bg-transparent rounded-lg `}
             value={cost.cost} 
                         
              />
