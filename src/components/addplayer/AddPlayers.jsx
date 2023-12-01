@@ -72,6 +72,7 @@ function AddPlayers() {
 
             
       </div>
+      
     </div>
   )
 }
