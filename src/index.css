@@ -6,3 +6,16 @@
 .light .hidebtn{ 
     display: none !important;
 }
+
+.light .overbox {
+    width: 19px;
+    height: 11px;
+    border: 1px solid #aba7a7;
+    top: 7px;
+    position: relative;
+    left: 3px;
+    background: #c7d3d5;
+    box-shadow: 0px 1px 1px #999999;
+    left: 0;
+    margin-right: 5px;
+}

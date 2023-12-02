@@ -15,15 +15,18 @@ function TodoItem({todo}) {
         setIsTodoEditable(false)
     }
     
-
+const htmlid = document.querySelector(".light")
+console.log(htmlid);
   return (
     <div 
     className={`flex border border-black/10 rounded-lg px-2 py-1 gap-x-2 shadow-sm shadow-white/50 duration-300  text-black mr-1 ${
                 todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
             }`}>
-            <input type="checkbox" className="cursor-pointer"
+            <input type="checkbox" className="hidebtn cursor-pointer boxdisable"
             checked={todo.completed}
-            onChange={toggleCompleted} />
+            onChange={toggleCompleted} 
+            />
+            <span className='overbox'></span>
     {/* Edit, Save Button */}        
             <input type="text" className={`border w-10 outline-none  bg-transparent rounded-lg ${
                     isTodoEditable ? "border-black/20 px-2" : "border-transparent"
