@@ -21,7 +21,7 @@ function TodoForm() {
    const onSelect = (selectitem) => {
         setPlayer(selectitem)
    }
-    // const playerlist = JSON.parse(localStorage.getItem("players"))
+  
 
     return (
         <form onSubmit={add}  className="flex relative">
@@ -55,13 +55,7 @@ function TodoForm() {
             <div key={item.name} onClick={() => onSelect(item.name)} className='bg-white text-black px-4 w-40 text-left cursor-pointer pb-1'>{item.name}</div>
         )) }
     </div>
-   {/* <datalist id="browsers">
-    {playerlist ? (
-        playerlist.map((player) => (
-             <option value={player.player}></option>
-         ))
-    ): (null)}
-   </datalist> */}
+
             <button type="submit" className="rounded-lg px-4 py-1 bg-green-600 text-white shrink-0">
                 Add
             </button>
