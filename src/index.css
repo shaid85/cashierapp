@@ -6,6 +6,9 @@
 .light .hidebtn{ 
     display: none !important;
 }
+.dark .hidebox{ 
+    display: none !important;
+}
 .light .overbox {
     content: "❎";
     width: 21px;
@@ -17,11 +20,7 @@
     left: 0;
     margin-right: 5px;
 }
-span.overbox.tikbox {
-    top: 1px;
+.dark .overbox{display: none;}
+.dark .overbox.tikbox {
+    display: block;
 }
-span.overbox.gificon {
-    top: 6px;
-    left: 4px;
-}
-.dark .overbox{display: none !important;}

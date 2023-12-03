@@ -15,20 +15,36 @@ function TodoItem({todo}) {
         setIsTodoEditable(false)
     }
     
-const htmlid = document.querySelector(".light")
-console.log(htmlid);
+    const alertcall = () => {
+        if(todo.completed){
+            alert("He Paid. Can delete only.")
+        }else{
+            alert("Click Show Edit on Top")
+        }
+    }
+
+    const deleteitem = (id) => {
+        let result = confirm("Want to delete?");
+        if (result) {
+            deleteTodo(id)
+        }        
+    }
+
   return (
     <div 
     className={`flex border border-black/10 rounded-lg px-2 py-1 gap-x-2 shadow-sm shadow-white/50 duration-300  text-black mr-1 ${
                 todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
             }`}>
-            <input type="checkbox" className={`hidebtn cursor-pointer boxdisable`}
+            <input type="checkbox" className={`${
+                todo.completed ? "hidebox" : ""
+            } hidebtn cursor-pointer boxdisable`}
             checked={todo.completed}
             onChange={toggleCompleted} 
+            
             />
             <span className={`overbox ${
                 todo.completed ? "tikbox" : ""
-            }`} onClick={() => alert("Show Edit First")}>
+            }`} onClick={alertcall}>
             {todo.completed ? "✅" : "⬜"}</span>
     {/* Edit, Save Button */}        
             <input type="text" className={`border w-10 outline-none  bg-transparent rounded-lg ${
@@ -62,7 +78,7 @@ console.log(htmlid);
     {/* Delete Todo Button */}        
               <button
                 className="hidebtn inline-flex w-6 h-6 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0"
-                onClick={() => deleteTodo(todo.id)}
+                onClick={() => deleteitem(todo.id)}
             >
                 ❌
             </button>
