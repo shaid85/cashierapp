@@ -19,7 +19,7 @@ function CostForm() {
         setPlayer("")
     }
     
-    const todos = JSON.parse(localStorage.getItem("todos"))
+    // const todos = JSON.parse(localStorage.getItem("todos"))
 
 
     return (
@@ -35,20 +35,20 @@ function CostForm() {
     <option value="200"></option>
     <option value="100"></option>
   </datalist>          
-            {/* <input
+            <input
                 type="text" list="browsers"
                 placeholder="Player Name."
                 className="w-full border border-black/10 rounded-lg px-3 outline-none duration-150 bg-white/20 py-1.5 mr-1"
                 value={player}
                 onChange={(e) => setPlayer(e.target.value)}
-            /> */}
+            />
 
-            <select onChange={(e) => setPlayer(e.target.value)} className="bg-white/20 text-md px-5 rounded-lg text-white outline-none mr-1">
+            {/* <select onChange={(e) => setPlayer(e.target.value)} className="bg-white/20 text-md px-5 rounded-lg text-white outline-none mr-1">
                 <option className=" bg-slate-800 text-white" value="">Select Player</option>
                 {todos.map((item) => (
     <option className=" focus:bg-slate-800 bg-slate-800 text-white" value={item.player}>{item.player}</option>
 ))}
-            </select>
+            </select> */}
 
             <button type="submit" className="rounded-lg px-4 py-1 bg-green-600 text-white shrink-0">
                 Add
