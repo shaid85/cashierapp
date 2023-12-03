@@ -26,7 +26,7 @@ console.log(htmlid);
             checked={todo.completed}
             onChange={toggleCompleted} 
             />
-            <span className='overbox'></span>
+            <span className='overbox' onClick={() => alert("Show Edit First")}></span>
     {/* Edit, Save Button */}        
             <input type="text" className={`border w-10 outline-none  bg-transparent rounded-lg ${
                     isTodoEditable ? "border-black/20 px-2" : "border-transparent"
