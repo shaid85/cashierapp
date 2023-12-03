@@ -7,15 +7,21 @@
     display: none !important;
 }
 .light .overbox {
+    content: "❎";
     width: 21px;
     height: 12px;
-    border: 1px solid #aba7a7;
-    top: 7px;
+    top: 1px;
     position: relative;
     left: 3px;
-    border-radius: 2px;
-    background: #d9dedf;
-    box-shadow: 0px 1px 1px #999999;
+    background: transparent;
     left: 0;
     margin-right: 5px;
 }
+span.overbox.tikbox {
+    top: 1px;
+}
+span.overbox.gificon {
+    top: 6px;
+    left: 4px;
+}
+.dark .overbox{display: none !important;}
