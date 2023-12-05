@@ -29,7 +29,7 @@ function CostForm() {
         <form onSubmit={add}  className="flex relative">
             <input
                 type="number" list="taka"
-                placeholder="Cost..."
+                placeholder="Taka..."
                 className="w-full border border-black/10 rounded-lg px-3 outline-none duration-150 bg-white/20 py-1.5 mr-1"
                 value={cost}
                 onChange={(e) => setCost(e.target.value)}
